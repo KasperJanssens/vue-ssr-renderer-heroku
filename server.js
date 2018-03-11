@@ -19,6 +19,10 @@ const app = express();
 // Serve static assets from ./dist on the /dist route.
 app.use('/dist', express.static('dist'));
 
+app.get('/', (req, res) => {
+  res.send("koekoek");
+}
+
 // Render all other routes with the bundleRenderer.
 app.get('*', (req, res) => {
   console.log('GET CALLED KASPER');
