@@ -21,7 +21,7 @@ app.use('/dist', express.static('dist'));
 
 app.get('/', (req, res) => {
   res.send("koekoek");
-}
+});
 
 // Render all other routes with the bundleRenderer.
 app.get('*', (req, res) => {
@@ -34,4 +34,6 @@ app.get('*', (req, res) => {
 });
 
 // Bind the app to this port.
-app.listen(8080);
+
+var port = process.env.PORT || 8080;
+app.listen(port);
