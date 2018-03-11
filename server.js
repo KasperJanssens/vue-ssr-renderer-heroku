@@ -21,6 +21,7 @@ app.use('/dist', express.static('dist'));
 
 // Render all other routes with the bundleRenderer.
 app.get('*', (req, res) => {
+  console.log('GET CALLED KASPER');
   bundleRenderer
     // Renders directly to the response stream.
     // The argument is passed as "context" to main.server.js in the SSR bundle.
