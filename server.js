@@ -25,7 +25,6 @@ app.get('/', (req, res) => {
 
 // Render all other routes with the bundleRenderer.
 app.get('*', (req, res) => {
-  console.log('GET CALLED KASPER');
   bundleRenderer
     // Renders directly to the response stream.
     // The argument is passed as "context" to main.server.js in the SSR bundle.
@@ -35,5 +34,4 @@ app.get('*', (req, res) => {
 
 // Bind the app to this port.
 
-var port = process.env.PORT || 8080;
-app.listen(port);
+app.listen(8080);
