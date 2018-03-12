@@ -3,6 +3,7 @@
 const fs = require('fs');
 const express = require('express');
 const { createBundleRenderer } = require('vue-server-renderer');
+const PORT = process.env.PORT || 5000
 
 const bundleRenderer = createBundleRenderer(
   // Load the SSR bundle with require.
@@ -30,4 +31,4 @@ app.get('*', (req, res) => {
 
 // Bind the app to this port.
 
-app.listen($PORT);
+app.listen(PORT);
